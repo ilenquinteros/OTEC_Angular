@@ -19,6 +19,8 @@ import { EjemploIComponent } from './components/modulo_4/ejemplo-i/ejemplo-i.com
 import { EjemploIIComponent } from './components/modulo_4/ejemplo-ii/ejemplo-ii.component';
 import { EjemploIIIComponent } from './components/modulo_4/ejemplo-iii/ejemplo-iii.component';
 import { ProyectoFinalComponent } from './components/proyecto-final/proyecto-final.component';
+import { FormsModule } from '@angular/forms';
+import { DestacadorDirective } from './directives/destacador.directive';
 
 @NgModule({
   declarations: [
@@ -38,11 +40,13 @@ import { ProyectoFinalComponent } from './components/proyecto-final/proyecto-fin
     EjemploIComponent,
     EjemploIIComponent,
     EjemploIIIComponent,
-    ProyectoFinalComponent
+    ProyectoFinalComponent,
+    DestacadorDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

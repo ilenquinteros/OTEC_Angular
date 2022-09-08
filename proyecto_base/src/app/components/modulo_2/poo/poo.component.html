@@ -1,1 +1,17 @@
-<p>poo works!</p>
+<app-componente></app-componente>
+<div style="padding: 50px">
+    <h2>POO</h2>
+    <p>Datos trabajador</p>
+    <ul>
+        <li>Nombre: {{trabajador.nombre}}</li>
+        <li>RUT: {{trabajador.getRut()}}</li>
+        <li>Edad: {{trabajador.edad}}</li>
+        <li> 
+            <div *ngIf="trabajador.getContratoIndefinido(); else sinContratoIndefinido">Contrato indefinido: Si</div>
+            <ng-template #sinContratoIndefinido>Contrato indefinido: No</ng-template>
+        </li>
+    </ul>
+    <input type="text" placeholder="Porcentaje" [(ngModel)]="porcentaje">
+    <button (click)="funcionAumentarSueldo()">Aumentar sueldo</button>
+    <p>Sueldo {{trabajador.getSueldo()}}</p>
+</div>

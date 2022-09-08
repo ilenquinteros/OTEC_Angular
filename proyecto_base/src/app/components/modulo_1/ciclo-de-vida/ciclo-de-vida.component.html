@@ -1,1 +1,9 @@
-<p>ciclo-de-vida works!</p>
+<app-componente></app-componente>
+<div style="padding: 50px">
+    <h2>Ciclo de vida</h2>
+    <input type="text" placeholder="Input de prueba" [(ngModel)]="valor">
+    <button (click)="setTexto()">Click aqui</button>
+    <h3>{{texto}}</h3>
+    <p>(Ver la activacion de las funciones del ciclo de vida en la consola de navegador)</p>
+</div>
+

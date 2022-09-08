@@ -1,1 +1,17 @@
-<p>directivas works!</p>
+<app-componente></app-componente>
+<div style="padding: 50px">
+    <h2>Directivas</h2>
+    <input id="checkbox" type="checkbox" [(ngModel)]="valor">
+    <label for="checkbox">Mostrar contenido</label>
+    <h3 Destacador>Valor {{valor}}</h3>
+    <div *ngIf="valor; else template">
+        <ul>
+            <li *ngFor="let item of items">{{item}}</li>
+        </ul>
+    </div>
+    <ng-template #template>
+        <div>
+            <p>Sin contenido</p>
+        </div>
+    </ng-template>
+</div>
